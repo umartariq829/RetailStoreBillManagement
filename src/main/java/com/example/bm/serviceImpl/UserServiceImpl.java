@@ -38,6 +38,13 @@ public class UserServiceImpl implements UserService {
 
 	private static final Logger logger = LogManager.getLogger(UserServiceImpl.class.getName());
 
+	
+	/**
+	 * this method will create the user with the details given in parameter and 
+	 * will return the created user and the username for each user is unique ,if given 
+	 * duplicate username will throw an exception
+	 * UserRequestDTO contains the user detail to be created
+	 */
 	@Override
 	public UserResponseDTO createUser(UserRequestDTO request) {
 

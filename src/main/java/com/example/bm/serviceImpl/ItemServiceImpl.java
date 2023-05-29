@@ -31,6 +31,12 @@ public class ItemServiceImpl implements ItemService {
 
 	private static final Logger logger = LogManager.getLogger(ItemServiceImpl.class.getName());
 
+	/**
+	 * this method will create the item with the details given in parameter and 
+	 * will return the created item and the item code for each iteam is unique ,if given 
+	 * duplicate itemCode will throw an exception
+	 * ItemRequestDTO contains the iteam detail to be created
+	 */
 	@Override
 	public ItemResponseDTO createItem(ItemRequestDTO request) {
 		try {

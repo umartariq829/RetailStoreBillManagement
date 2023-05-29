@@ -41,6 +41,11 @@ public class OrderServiceImpl implements OrderService{
 
 	private static final Logger logger = LogManager.getLogger(UserServiceImpl.class.getName());
 
+	/**
+	 * this method will create the order with the details given in parameter that is userid and list of
+	 * ids of items for that user and will generate the total amount for all the items for that userid.
+	 * requestDTO contains the user id and list of item ids 
+	 * */
 	
 	@Override
 	public OrderResponseDTO createOrder(OrderRequestDTO requestDTO) {
