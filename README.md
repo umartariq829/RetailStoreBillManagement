@@ -1,5 +1,7 @@
 Below are the api's with request and response , which we have to use .
-http://localhost:8400/api/item/create-item
+steps
+1).we need to add items one by one using below api with given request
+http://localhost:8300/api/item/create-item
 Request:-
  {
     "name":"testing",
@@ -18,7 +20,7 @@ Response:-
     "quantity": "1",
     "category": "GROCERY"
 }
-
+2).we need to craete user one using below api with given request
 http://localhost:8300/api/user/create-user
 Request:-
 {
@@ -42,7 +44,7 @@ Response;-
 }
 
 
-
+1).we need to craete order using below api with given request
 http://localhost:8300/api/order/create-order
 Request:-
 {
