@@ -4,6 +4,19 @@ step 1:- maven clean
 step 2:- maven build inside goals enter this "clean org.jacoco:jacoco-maven-plugin:prepare-agent install"
 after successfully build . check target/site/jacoco/index.html . run this file in browser.
 
+to check on sonarqube
+step 1:- maven clean
+step 2:- maven build inside goals enter this "clean org.jacoco:jacoco-maven-plugin:prepare-agent install"
+step 3:- maven build inside goals enter this "sonar:sonar"
+
+
+to run the project
+step 1:- create db with name ad "bm" in mysql. and change the username and password in 
+application.properties file as yours
+step 2:- run project as java application.
+
+
+
 Below are the api's with request and response , which we have to use .
 steps
 1).we need to add items one by one using below api with given request
@@ -73,3 +86,9 @@ Response:-
     },
     "totalAmount": 519.5
 }
+
+
+to check the UML Diagram
+step 1:- https://app.diagrams.net/
+step 2:- choose open Exsisting diagrame.
+step 3:- select the UmlClassDiagram.drawio inside the umlDiaram folder.
