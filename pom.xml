@@ -42,6 +42,19 @@
 			<version>1.18.16</version>
 			<optional>true</optional>
 		</dependency>
+		
+		<!-- the Springfox implementation of the Swagger specification -->
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>2.9.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>2.9.2</version>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -49,6 +62,73 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			
+			<plugin>
+				<groupId>org.sonarsource.scanner.maven</groupId>
+				<artifactId>sonar-maven-plugin</artifactId>
+				<version>3.4.0.905</version>
+				<configuration>
+					<skip>
+						<!-- -->
+					</skip>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>0.8.5</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>prepare-agent</goal>
+						</goals>
+					</execution>
+					<!-- attached to Maven test phase -->
+					<execution>
+						<id>report</id>
+						<phase>test</phase>
+						<goals>
+							<goal>report</goal>
+						</goals>
+					</execution>
+
+					<execution>
+						<id>jacoco-check</id>
+						<goals>
+							<goal>check</goal>
+						</goals>
+						<configuration>
+							<rules>
+								<rule>
+									<element>PACKAGE</element>
+									<limits>
+										<limit>
+											<counter>LINE</counter>
+											<value>COVEREDRATIO</value>
+											<minimum>0.5</minimum>
+										</limit>
+									</limits>
+
+									<excludes>
+										<exclude>com.example.bm</exclude>
+										<exclude>com.example.bm</exclude>
+										<exclude>com.example.bm.controller</exclude>
+										<exclude>com.example.bm.config</exclude>
+										<exclude>com.example.bm.dto</exclude>
+										<exclude>com.example.bm.enums</exclude>
+										<exclude>com.example.bm.exception</exclude>
+										<exclude>com.example.bm.model</exclude>
+										<exclude>com.example.bm.repository</exclude>
+										<exclude>com.example.bm.utils</exclude>
+										</excludes>
+								</rule>
+							</rules>
+						</configuration>
+					</execution>
+
+				</executions>
 			</plugin>
 		</plugins>
 	</build>

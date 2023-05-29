@@ -1,3 +1,9 @@
+
+to check the code coverage
+step 1:- maven clean
+step 2:- maven build inside goals enter this "clean org.jacoco:jacoco-maven-plugin:prepare-agent install"
+after successfully build . check target/site/jacoco/index.html . run this file in browser.
+
 Below are the api's with request and response , which we have to use .
 steps
 1).we need to add items one by one using below api with given request

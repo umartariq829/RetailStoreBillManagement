@@ -23,6 +23,8 @@ import com.example.bm.dto.UserRequestDTO;
 import com.example.bm.dto.UserResponseDTO;
 import com.example.bm.service.ItemService;
 
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
+
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @RequestMapping("/api/item")

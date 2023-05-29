@@ -28,6 +28,8 @@ import com.example.bm.service.ItemService;
 import com.example.bm.service.OrderService;
 import com.example.bm.service.UserService;
 
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
+
 
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
